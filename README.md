@@ -3,8 +3,12 @@
 
 % Reference: Kim et al., XXXX % 
 
-4S_materials_eng.xlsx > Item list
-PCB1.zip & PCB2.zip &  > PCB boards
+Components > Item Information
+3D_printer  > 3D printing Information
+Codes > Codes for Raspberry Pi
+Images > Images for 4S-SIF
+Images_Outdoor > Images for outdoor experiment
+PCB > Customized Printed Circuit Board
 4S-SIF code > information about 4S code
 
 % /////////////////////////////////////////////////////////////
