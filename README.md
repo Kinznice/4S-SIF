@@ -1,28 +1,27 @@
-# Smart Surface Sensing System - for SIF version (4S-SIF)
-% The uploaded information for 4S-SIF.
+# Smart Surface Sensing System - for SIF version (4S-SIF)<br />
+% The uploaded information for 4S-SIF.<br />
 
-% Reference: Kim et al., XXXX % 
+% Reference: Kim et al., XXXX % <br />
 
-Components > Item Information
-3D_printer  > 3D printing Information
-Codes > Codes for Raspberry Pi
-Images > Images for 4S-SIF
-Images_Outdoor > Images for outdoor experiment
-PCB > Customized Printed Circuit Board
-4S-SIF code > information about 4S code
+Components > Item Information<br />
+3D_printer  > 3D printing Information<br />
+Codes > Codes for Raspberry Pi<br />
+Images > Images for 4S-SIF<br />
+PCB > Customized Printed Circuit Board<br />
+4S-SIF code > information about 4S code<br />
 
-% /////////////////////////////////////////////////////////////
-% Contact information:
+/////////////////////////////////////////////////////////////<br />
+Contact information:<br /><br />
 
-Dr. Jongmin Kim
+Jongmin Kim, Ph.D.<br />
 
-Postdoc, Department of Environmental Sciences
-University of Virginia
-Clark Hall
-he | him | his
+Postdoc, Department of Environmental Sciences<br />
+University of Virginia<br />
+Clark Hall<br />
+he | him | his<br />
 
-E-mail : kinznice@gmail.com or JongminKim@virginia.edu
-Homepage : www.kimhyodong.com
-phone : 1-434-956-9619
+E-mail : kinznice@gmail.com or JongminKim@virginia.edu<br />
+Homepage : www.kimhyodong.com<br />
+phone : 1-434-956-9619<br />
 
-% /////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////<br />
