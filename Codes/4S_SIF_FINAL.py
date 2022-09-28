@@ -1,3 +1,5 @@
+## Import codes ## 
+
 import RPi.GPIO as GPIO
 import serial
 import time
@@ -6,30 +8,31 @@ import base64
 from datetime import datetime
 import Adafruit_DHT
 
-
+## Set GPIO ##
 GPIO.setwarnings(False)
 GPIO.setmode(GPIO.BCM)
 
-
+## Set motor location for Filter numbers ##
 filters = {
-    2:75,
-    4:76,
-    6:77,
+    2:75, ## For 755 nm filter
+    4:76, ## For 760 nm filter
+    6:77, ## For 770 nm filter
     8:00,
     10:11,
     12:12
 }
 
-SERVO_PIN = 18
-TEMP_PIN = 23
+SERVO_PIN = 18  ## Set servo motor GIO PIN
+TEMP_PIN = 23  ## Set Temp/Humi sensor GIO PIN
 
-DHT22 = Adafruit_DHT.AM2302
+DHT22 = Adafruit_DHT.AM2302 ## Set Temp/Humi sensor
 
-sw_L  = 6
-sw_R  = 5
-pwmL = 13
-pwmR = 12
+sw_L  = 6 ## Setting for geared motor
+sw_R  = 5 ## Setting for geared motor
+pwmL = 13 ## Setting for geared motor
+pwmR = 12 ## Setting for geared motor
 
+## Set GPIO ##
 GPIO.setup(SERVO_PIN, GPIO.OUT)
 GPIO.setup(sw_L,GPIO.IN)
 GPIO.setup(sw_R,GPIO.IN)
@@ -44,13 +47,13 @@ for cnt in range(40):
     print(40-cnt ," ...")
     time.sleep(1)
 
+## Saved file directory ##
 sTime = time.strftime('%Y_%m_%d_%H_%M_%S',time.localtime(time.time()))
 #print(sTime)
 # File URL
 url = '/home/pi/4S_SIF_v2/FS_SIF_v2_%s.txt' % (sTime)
 
-
-
+## Geard motor setting ##
 pwm = GPIO.PWM(SERVO_PIN,50)
 pwm.start(2)
 
@@ -60,12 +63,13 @@ pwm_R  = GPIO.PWM(pwmR,100)
 pwm_R.start(dcspeed)
 pwm_L.start(dcspeed)
 
+## Set Temp/Humi sensor ##
 humidity,temperature = 0.0,0.0
 updown = 0
 
 extraTag = "Temp= {0:0.1f} C , Humi= {1:0.1f} % ".format(temperature, humidity)
 
-
+## Setting for Photodiode ADC ##
 ser = serial.Serial(
     port = '/dev/ttyUSB_P1',
     baudrate = 19200,
@@ -98,7 +102,7 @@ while GPIO.input(sw_L):
 pwm_L.ChangeDutyCycle(0)
 
 
-
+## Main body for data collection ##
 time.sleep(10)
 while True:
     today = datetime.now().day
